@@ -1,4 +1,6 @@
 import "@styles/globals.css";
+import Nav from "@components/Nav";
+import Provider from "@components/Provider";
 
 export const metadata = {
   title: "Promptadise",
@@ -8,12 +10,15 @@ export const metadata = {
 const RootLayout = ({ children }) => {
   return (
     <html lang="en">
-      <head>
+      <body>
         <div className="background">
           <div className="background__gradient" />
         </div>
-        <main className="app">{children}</main>
-      </head>
+        <main className="app">
+          <Nav />
+          {children}
+        </main>
+      </body>
     </html>
   );
 };
