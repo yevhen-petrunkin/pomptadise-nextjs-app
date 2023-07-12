@@ -5,7 +5,7 @@ const Home = () => {
     <section className="w-full flex-center flex-col">
       <h1 className="head_text text-center">
         Discover & Share{` `}
-        <span className="orange_gradient max-sm:inline block text-center">
+        <span className="orange_gradient pb-4 max-sm:inline block text-center">
           AI-Powered Propmts
         </span>
       </h1>
