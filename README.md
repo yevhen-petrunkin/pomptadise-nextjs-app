@@ -2,7 +2,7 @@
 
 ## Next.js 13 React Tailwind Responsive Web Application
 
-![Home Page](https://freeimage.host/i/HsyXTX4)
+![Home Page](https://i.imgur.com/EiOXmeb.jpg)
 
 ## Functionality
 
