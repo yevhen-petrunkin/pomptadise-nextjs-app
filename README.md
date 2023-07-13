@@ -1,34 +1,22 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Promptadise
 
-## Getting Started
+## Next.js 13 React Tailwind Responsive Web Application
 
-First, run the development server:
+![Home Page](https://freeimage.host/i/HsyXTX4)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Functionality
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This app allows you to create AI prompts and share them with others. The app enables you to write, edit and delete your prompts in a convenient way.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+All you have to do is sign in with your google account.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+You can also search for the best promts by words, authors' names and hashtags. See your own and other authors' prompt profiles.
 
-## Learn More
+## Technologies
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Next.js 13
+React
+JavaScript
+Tailwind
+CSS
+MongoDB

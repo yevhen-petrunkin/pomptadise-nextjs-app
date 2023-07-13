@@ -16,7 +16,6 @@ const MyProfile = () => {
       const response = await fetch(`/api/users/${session?.user.id}/posts`);
       const postArr = await response.json();
       setPosts(postArr);
-      console.log(postArr);
     };
     if (session?.user.id) {
       fetchPosts();
