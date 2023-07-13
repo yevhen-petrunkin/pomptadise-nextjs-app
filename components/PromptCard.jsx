@@ -8,6 +8,7 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
   const { data: session } = useSession();
   const pathName = usePathname();
   const router = useRouter();
+
   const [copied, setCopied] = useState("");
 
   const handleCopy = () => {
@@ -16,10 +17,25 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
     setTimeout(() => setCopied(""), 3000);
   };
 
+  const handleProfileClick = () => {
+    console.log(post);
+
+    if (post.creator._id === session?.user.id) {
+      return router.push("/profile");
+    }
+
+    router.push(
+      `/profile/${post.creator._id}?name=${post.creator.original_username}`
+    );
+  };
+
   return (
     <article className="prompt_card">
       <div className="flex justify-between items-start gap-5">
-        <div className="flex-1 flex justify-start items-center gap-3 cursor-pointer">
+        <div
+          className="flex-1 flex justify-start items-center gap-3 cursor-pointer"
+          onClick={handleProfileClick}
+        >
           <Image
             src={post.creator.image}
             alt="user-image"
@@ -29,7 +45,7 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
           />
           <div className="flex flex-col">
             <h2 className="font-satoshi font-semibold text-gray-900">
-              {post.creator.username}
+              {post.creator.original_username}
             </h2>
             <p className="font-inter text-sm text-gray-500">
               {post.creator.email}
@@ -55,7 +71,7 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
         className="font-inter text-sm blue_gradient cursor-pointer"
         onClick={() => handleTagClick && handleTagClick(post.tag)}
       >
-        #{post.tag}
+        {post.tag[0] === "#" ? post.tag : "#" + post.tag}
       </p>
 
       {session?.user.id === post.creator._id && pathName === "/profile" && (
